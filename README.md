@@ -72,13 +72,6 @@ throughout the listing pages, rather than being grouped together.
 	    name VARCHAR(255)
 	);
 ```
-**Explanation:**
-
-	-   **Sellers Table**: Contains seller information, including a unique `seller_id`.
-
- 	-   **Offers Table**: Contains the offers, associated with a seller and category, with fields for price, creation time, and status.
-
- 	-   **Categories Table**: Holds the category information.
 
 **4. Provide sample queries and code snippets that demonstrate how to achieve the round-robin display.**
 ```python
