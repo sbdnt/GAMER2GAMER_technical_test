@@ -51,10 +51,10 @@ throughout the listing pages, rather than being grouped together.
    
 **3. Include a sample database schema.**
 ```python 
-	CREATE TABLE Sellers (
-    seller_id INT PRIMARY KEY,
-    name VARCHAR(255),
-    rating DECIMAL(3, 2)
+      CREATE TABLE Sellers (
+    	seller_id INT PRIMARY KEY,
+    	name VARCHAR(255),
+    	rating DECIMAL(3, 2)
 	);
 	
 	CREATE TABLE Offers (
