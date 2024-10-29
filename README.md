@@ -169,7 +169,7 @@ RewardPoints->> Customer: Update Total Points
 
 - **Database Schema Design**:
 	```python
-		CREATE TABLE Customers (
+	CREATE TABLE Customers (
 	    customer_id INT PRIMARY KEY AUTO_INCREMENT,
 	    name VARCHAR(255) NOT NULL,
 	    email VARCHAR(255) NOT NULL UNIQUE,
