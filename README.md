@@ -24,21 +24,20 @@ To ensure fair visibility for all sellers, G2G wants to implement a round-robin 
 for displaying offer listings. This means each seller’s offers should be evenly distributed
 throughout the listing pages, rather than being grouped together.
 ## Implement:
-**1. Explain how you would design and implement this system to support the
-round-robin display of offers.**
-	- **Database Partitioning by Seller**: Assign each listing a priority or order number to help distribute listings from different sellers more evenly.  
-	- **Sorting and Filtering Support**: Use composite indices and a flexible query structure to allow listings to be retrieved efficiently based on different sorting criteria (e.g., by price, rating).
-	 - **Precomputed Round-Robin Sequence**: Use a precomputed sequence or row-based offset approach to determine the "next" listing for each seller. This ensures minimal computation during data retrieval.
+**1. Explain how you would design and implement this system to support the round-robin display of offers.**
+	**Database Partitioning by Seller**: Assign each listing a priority or order number to help distribute listings from different sellers more evenly.  
+	**Sorting and Filtering Support**: Use composite indices and a flexible query structure to allow listings to be retrieved efficiently based on different sorting criteria (e.g., by price, rating).
+	**Precomputed Round-Robin Sequence**: Use a precomputed sequence or row-based offset approach to determine the "next" listing for each seller. This ensures minimal computation during data retrieval.
 **2. Provide a high-level architecture of your solution.**
-		**Frontend UI**:
-				-  A dynamic interface for listing pages, allowing users to filter and sort listings.
-			    - Pagination controls to navigate through listings in a round-robin distribution.
-		 **Backend Service**:  
-			    - API Endpoint: To retrieve listings based on user filters and pagination requirements.
-			    - Round-Robin Query Processor: Service that manages the round-robin selection and ensures balanced listing distribution for each seller.
-		**Database**:  
-			    - Stores listings with fields like `seller_id`, `listing_id`, `priority`, and relevant listing attributes.
-			    - Indexes on `seller_id` and `priority` for efficient access.
+	**Frontend UI**:
+		-  A dynamic interface for listing pages, allowing users to filter and sort listings.
+		- Pagination controls to navigate through listings in a round-robin distribution.
+	 **Backend Service**:  
+		- API Endpoint: To retrieve listings based on user filters and pagination requirements.
+		- Round-Robin Query Processor: Service that manages the round-robin selection and ensures balanced listing distribution for each seller.
+	**Database**:  
+		- Stores listings with fields like `seller_id`, `listing_id`, `priority`, and relevant listing attributes.
+		- Indexes on `seller_id` and `priority` for efficient access.
    
 **3. Include a sample database schema.**
 ```python 
@@ -64,13 +63,11 @@ round-robin display of offers.**
 	);
 ```
 **Explanation:**
+	-   **Sellers Table**: Contains seller information, including a unique `seller_id`.
+	-   **Offers Table**: Contains the offers, associated with a seller and category, with fields for price, creation time, and status.
+	-   **Categories Table**: Holds the category information.
 
--   **Sellers Table**: Contains seller information, including a unique `seller_id`.
--   **Offers Table**: Contains the offers, associated with a seller and category, with fields for price, creation time, and status.
--   **Categories Table**: Holds the category information.
-
-**4. Provide sample queries and code snippets that demonstrate how to achieve the
-round-robin display.**
+**4. Provide sample queries and code snippets that demonstrate how to achieve the round-robin display.**
 ```python
 	import mysql.connector
 
