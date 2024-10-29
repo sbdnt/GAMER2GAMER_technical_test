@@ -34,17 +34,17 @@ throughout the listing pages, rather than being grouped together.
 
  **2. Provide a high-level architecture of your solution.**
  
- **Frontend UI**:
+ - **Frontend UI**:
  
 		-  A dynamic interface for listing pages, allowing users to filter and sort listings.
 		- Pagination controls to navigate through listings in a round-robin distribution.
  
-  **Backend Service**:  
+  - **Backend Service**:  
   
 		- API Endpoint: To retrieve listings based on user filters and pagination requirements.
 		- Round-Robin Query Processor: Service that manages the round-robin selection and ensures balanced listing distribution for each seller.
   
-  **Database**: 
+  - **Database**: 
   
 		- Stores listings with fields like `seller_id`, `listing_id`, `priority`, and relevant listing attributes.
 		- Indexes on `seller_id` and `priority` for efficient access.
