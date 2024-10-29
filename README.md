@@ -36,7 +36,7 @@ throughout the listing pages, rather than being grouped together.
  
  - **Frontend UI**:
  
-		-  A dynamic interface for listing pages, allowing users to filter and sort listings.
+		- A dynamic interface for listing pages, allowing users to filter and sort listings.
 		- Pagination controls to navigate through listings in a round-robin distribution.
  
   - **Backend Service**:  
