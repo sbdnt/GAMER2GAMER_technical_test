@@ -44,10 +44,6 @@ throughout the listing pages, rather than being grouped together.
 		- API Endpoint: To retrieve listings based on user filters and pagination requirements.
 		- Round-Robin Query Processor: Service that manages the round-robin selection and ensures balanced listing distribution for each seller.
   
-  - **Database**: 
-  
-		- Stores listings with fields like `seller_id`, `listing_id`, `priority`, and relevant listing attributes.
-		- Indexes on `seller_id` and `priority` for efficient access.
    
 **3. Include a sample database schema.**
 ```python 
